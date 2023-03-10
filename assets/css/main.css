@@ -12,6 +12,15 @@
   border: none;
 }
 
+/* Link button */
+.link-button {
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #000;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -21,7 +30,7 @@ body {
 }
 
 .uig-content-limiter {
-  max-width: 1170px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -141,6 +150,117 @@ body {
 .header-extras .search-from--header .btn-cover-icon:hover {
   transition: 200ms;
   opacity: 1;
+}
+
+/* Sticky sidebar */
+.app-sidebar--sticky {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.647);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sticky-sidebar--self {
+  width: 30%;
+  min-height: 100%;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+}
+.sticky-sidebar--self .sticky-sidebar-header {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: rgb(14, 14, 14);
+}
+
+.disable-stickySidebar-self {
+  transition: 700ms;
+  right: -30%;
+}
+
+.disable-stickySidebar-layer {
+  transition-delay: 500ms;
+  transition: 400ms;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.enable-stickySidebar-self {
+  transition-delay: 200ms;
+  transition: 700ms;
+  right: 0;
+}
+
+.enable-stickySidebar-layer {
+  transition-delay: 500ms;
+  transition: 500ms;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Banner */
+.app-banner {
+  width: 100%;
+  height: 500px;
+  padding: 30px 0;
+}
+.app-banner .uig-content-limiter {
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-image: url("https://lockthemes.com/competo/wp-content/uploads/sites/11/2022/08/cpt-video-layer-2.jpg");
+  background-size: cover;
+  background-color: orange;
+}
+.app-banner .uig-content-limiter::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.27);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Swiper slider */
+.app-slider {
+  width: 100%;
+  height: 100%;
+}
+.app-slider swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app-slider swiper-slide .banner-heading {
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 70px;
+  margin-bottom: 0px;
+  color: #fff;
+}
+.app-slider .swiper-pagination-bullet {
+  display: none !important;
+  padding: 3px;
+}
+
+.swiper-pagination-bullet {
+  display: none !important;
 }
 
 /*# sourceMappingURL=main.css.map */
