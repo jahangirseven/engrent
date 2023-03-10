@@ -1,1 +1,146 @@
-/* Base styles */
+.textfield-default {
+  padding: 12px 20px;
+  font-family: inherit;
+  outline: 0;
+  border-radius: 2px;
+  border: 1px solid #eee;
+  background-color: rgb(243, 243, 243);
+}
+
+.btn-cover-icon {
+  background-color: transparent;
+  border: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background-color: #eee;
+  font-family: "Jost";
+}
+
+.uig-content-limiter {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.ml-mg-10 {
+  margin: 0 10px;
+}
+
+/* Topbar */
+.app-topbar {
+  width: 100%;
+  height: 50px;
+  font-size: 0.9em;
+  background-color: rgb(7, 8, 22);
+  color: #fff;
+}
+.app-topbar .uig-content-limiter {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header */
+.app-header {
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+}
+.app-header .uig-content-limiter {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  max-width: 180px;
+  height: auto;
+}
+.header-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+.navbar ul ul {
+  width: 200px;
+  background-color: #fff;
+  padding: 30px 20px;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.0588235294);
+  transition: 300ms;
+  transition-delay: 100ms;
+  opacity: 0;
+  visibility: hidden;
+}
+.navbar ul ul li {
+  position: relative;
+  padding: 6px 10px;
+  transition: 200ms;
+}
+.navbar ul ul li:hover {
+  transition: 200ms;
+  background-color: rgb(245, 245, 245);
+}
+.navbar ul > li.menu-item-has-child {
+  padding-right: 10px;
+  position: relative;
+}
+.navbar ul > li.menu-item-has-child::after {
+  content: "\f078";
+  font-family: fontawesome;
+  font-size: 0.6rem;
+  position: absolute;
+  bottom: 4px;
+  right: 5px;
+  transition: 100ms;
+}
+.navbar ul > li.menu-item-has-child:hover::after {
+  transition: 100ms;
+  bottom: 2px;
+}
+.navbar li {
+  position: relative;
+}
+.navbar li:hover ul {
+  transition: 200ms;
+  top: 20px;
+  opacity: 1;
+  visibility: visible;
+}
+.navbar li a {
+  text-decoration: none;
+  margin: 0 7px;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: rgb(41, 41, 41);
+}
+
+/*header extras */
+.header-extras {
+  display: flex;
+  align-items: center;
+}
+.header-extras .search-from--header .btn-cover-icon {
+  position: relative;
+  left: -40px;
+  opacity: 0.6;
+  transition: 200ms opacity;
+  cursor: pointer;
+}
+.header-extras .search-from--header .btn-cover-icon:hover {
+  transition: 200ms;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=main.css.map */

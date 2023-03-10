@@ -1,0 +1,161 @@
+@import './colors' ; 
+@import './elements' ;
+body{
+    margin: 0;
+    padding:0;
+    font-size:16px;
+    background-color: #eee;
+    font-family: 'Jost';
+}
+
+.uig-content-limiter{
+    max-width: 1170px;
+    margin: 0 auto;
+
+}
+
+.ml-mg-10{
+    margin: 0 10px;
+}
+
+
+/* Topbar */ 
+
+.app-topbar{
+    width: 100%;
+    height: 50px;
+    font-size: .9em;
+    background-color: rgb(7, 8, 22);
+    color:#fff;
+
+    .uig-content-limiter{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Header */
+.app-header{
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+
+    .uig-content-limiter{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.header-logo{
+    max-width: 180px;
+    height: auto;
+   img{
+    max-width: 100%;
+    height: auto;
+   }
+}
+
+
+
+.navbar{
+    ul{
+        display: flex;
+        list-style: none;
+
+        ul{
+            width: 200px;
+            background-color: #fff;
+            padding:30px 20px;
+            flex-direction: column;
+            position: absolute;
+            top:50px;
+            box-shadow: 0 5px 20px #0000000f;
+            transition: 300ms ;
+            transition-delay: 100ms;
+            opacity: 0;
+            visibility: hidden;
+            li{
+                position: relative;
+                padding:6px 10px ;
+                transition: 200ms;
+
+                &:hover{
+                   transition: 200ms;
+                   background-color: rgb(245, 245, 245);
+                }
+            }
+       
+        }
+
+        >li.menu-item-has-child{
+                padding-right: 10px;
+                position: relative;
+
+            &::after{
+                content:"\f078" ;
+                font-family: fontawesome;
+                font-size: .6rem;
+                position: absolute ;
+                bottom: 4px;
+                right: 5px;
+                transition: 100ms;
+            }
+            &:hover{
+                &::after{
+                    transition: 100ms;
+                    bottom: 2px;
+                }
+            }
+         }
+    }
+ 
+    li{
+        position: relative;
+
+        &:hover ul{
+            transition: 200ms;
+            top:20px;
+            opacity: 1;
+            visibility: visible;
+
+        }
+
+     
+    }
+    li a{
+        text-decoration: none;
+        margin : 0 7px ;
+        font-size: 0.9em;
+        font-weight: 500;
+        color:$header-menu-text-color ;
+
+ 
+    }
+
+
+}
+
+
+
+/*header extras */
+
+.header-extras{
+    display: flex;
+    align-items: center;
+
+    .search-from--header .btn-cover-icon{
+        position: relative;
+        left: -40px;
+        opacity: .6;
+        transition: 200ms opacity; 
+        cursor: pointer;
+        &:hover{
+            transition: 200ms ; 
+            opacity: 1;
+        }
+    }
+}
