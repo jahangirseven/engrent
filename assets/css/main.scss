@@ -4,12 +4,11 @@ body{
     margin: 0;
     padding:0;
     font-size:16px;
-    background-color: #eee;
-    font-family: 'Jost';
+     font-family: 'Jost';
 }
 
 .uig-content-limiter{
-    max-width: 1280px;
+    max-width: 1170px;
     margin: 0 auto;
 
 }
@@ -285,3 +284,113 @@ body{
     display: none !important;
 }
  
+
+/* Sponsors section */
+.app-sponsors--home{
+    display: none;
+}
+.brand-list--images{
+    display: flex;
+    justify-content: space-between;
+}
+.brand-list--images img{
+    max-width: 150px ; 
+    height: auto;
+}
+
+/*Company benefits */
+
+.company-benefits--home{
+    padding: 90px 0;
+    height: 300px;
+
+    .benefits-section-header{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+        border-bottom: 1px solid rgb(220, 220, 220);
+
+        .slot-left{
+           
+            h1{
+                margin:  0 auto;
+                font-size: 2.2rem;
+                line-height: 45px;
+            }
+        }
+        .slot-right{
+            width: 35%;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            border-left: 3px solid rgb(101, 101, 101) ;;
+            p{
+                font-size: 1.1rem;
+                margin: 0 auto;
+                opacity: .6;
+            }
+        }
+    }
+    .benefits--list{
+        height: 300px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .single-benefit{
+        width: 22.5% ;
+        height: 100%;
+ 
+        .benefit-icon{
+            width: 60px;
+            height: 60px;
+            display: flex;
+            border-radius: 3px;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(244, 245, 250);
+        }
+
+        p{
+            color:rgb(145, 145, 145)
+        }
+    }
+}
+
+
+/* Handpicked items */
+
+
+.handpicked-sections--home{
+    padding: 90px 0;
+    
+    .picked-item-list{
+        height: 240px;
+        display: flex;
+        justify-content: space-between;
+
+        .single-item{
+            width: 23%;
+            height: 100%;
+            background:url('https://i.pinimg.com/736x/ae/9a/ca/ae9acada5303315ac5dff4e5c25de37a.jpg') ; 
+            background-size: cover;
+            background-position: center center;
+            border-radius: 5px;
+            padding: 30px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+
+            .link__item{
+                width: 80%;
+                display: block;
+                align-self: flex-end;
+                text-align: center;
+                padding: 10px;
+                text-decoration: none;
+                border-radius: 3px;
+                background-color: #fff;
+            }
+        }
+    }
+}
