@@ -264,7 +264,7 @@ body {
 
 /* Sponsors section */
 .app-sponsors--home {
-  display: none;
+  padding: 90px 0;
 }
 
 .brand-list--images {
@@ -422,6 +422,12 @@ body {
   opacity: 0.56;
   text-decoration-line: line-through;
 }
+.featured-items--home .item-list .swiper-scrollbar {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: 24px;
+}
 
 .swiper {
   width: 100%;
@@ -459,6 +465,59 @@ body {
   content: "\f053";
   font-family: fontawesome;
   font-size: 1.1rem;
+}
+
+/* inner banner */
+.inner-banner--discount {
+  height: 320px;
+}
+.inner-banner--discount .uig-content-limiter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: aqua;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.inner-banner--discount .uig-content-limiter .slot-left {
+  width: 50%;
+  background-color: orange;
+  background-image: url("https://el4.thembaydev.com/fana/wp-content/uploads/2022/01/product-35.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.inner-banner--discount .uig-content-limiter .slot-left::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+  position: absolute;
+}
+.inner-banner--discount .uig-content-limiter .slot-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  box-sizing: border-box;
+  background-color: #18181d;
+  color: #fff;
+}
+.inner-banner--discount .uig-content-limiter .slot-right h5 {
+  margin: 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+.inner-banner--discount .uig-content-limiter .slot-right p {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.inner-banner--discount .uig-content-limiter .slot-right .link-button {
+  align-self: flex-start;
 }
 
 /*# sourceMappingURL=main.css.map */
