@@ -1,5 +1,7 @@
 @import './colors' ; 
 @import './elements' ;
+@import './components' ;
+
 body{
     margin: 0;
     padding:0;
@@ -587,4 +589,27 @@ padding: 90px 0;
             }
         }
     }
+  } 
+
+  /* latest products home */
+
+  .latest-products--home{
+    padding: 90px 0;
+
+    .uig-content-limiter{
+
+
+        .product-list{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .single-productBox--standard{
+                margin-bottom: 30px;
+            }
+        }
+    }
+           
+
+
   }

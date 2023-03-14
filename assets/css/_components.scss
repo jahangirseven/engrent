@@ -1,0 +1,158 @@
+/* Single product box - standard style */
+
+.single-productBox--standard{
+    width: 23%;
+    height: 360px;
+    position: relative;
+    
+    .thumbnail-layer{
+        display: block ; 
+        position: relative;
+        width: 100%;
+        height: 80%;
+        background: url('https://weblearnbd.net/wp/ninico/wp-content/uploads/2023/02/product-27.jpg');
+        background-size: cover;
+        background-position: center center;
+        
+        
+        &::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0);
+            transition: 300ms;
+        }
+
+      
+    }
+    &:hover .thumbnail-layer::after{
+        background-color: rgba(0, 0, 0, 0.201);
+        transition: 300ms;  
+    }
+    .product-actions{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 80%;
+        overflow: hidden;
+        position: absolute;
+        top:0;
+        
+
+        .extra-actions{
+            width: 100%;
+            height:60% ;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+              
+            .slot-left,.slot-right{
+                width: 40%;
+                position: relative;
+            }
+         
+            .slot-left{
+                transition: 300ms;
+                left: -50%;
+            }
+
+            .slot-right{
+                display: flex;
+                right: -50%;
+                justify-content: flex-end;
+                padding: 20px;
+                box-sizing: border-box;
+                transition: 500ms;
+                transition-delay:100ms;
+
+                .add-to-wishlist{
+                    display: inline-flex;
+                    width: 40px;
+                    height: 40px;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fff;
+                    border-radius: 30px;
+                    cursor: pointer;
+                    transition: 200ms transform; 
+
+                    transform: scale(0.9);
+
+                    &:hover{
+                        transition: 200ms ; 
+                        transform: scale(1);
+                    }
+                }
+           
+            }
+        }
+        .add-to-cart{
+            width: 60%;
+            padding: 10px;
+            position: relative;
+            bottom: -50px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #000;
+            color:#fff;
+            transition: 300ms;
+            transition-delay:200ms;
+        }
+
+        &:hover .extra-actions .slot-left {
+            transition: 300ms;
+            left: 0;
+        }
+        
+        &:hover .extra-actions .slot-right {
+            transition-delay: 1200ms;
+            transition: 300ms;
+            right: 0;
+        }
+        &:hover .add-to-cart{
+            transition: 300ms;
+            bottom: 30px;
+        }
+
+    }
+
+    .product-meta{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .meta-textContent{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+
+            p{
+                margin: 0;
+            }
+        }
+
+
+        .meta-price{
+            display: flex;
+            flex-direction: column;
+            padding: 13px 0;
+
+            .product-price{
+            font-size: 1.2rem;
+            font-weight: 500;
+        } 
+        
+        .product-old-price{
+             font-size: 1rem;
+             text-decoration-line:line-through;
+             opacity: .8;
+          }
+        }
+    }
+}
